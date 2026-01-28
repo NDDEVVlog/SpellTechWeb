@@ -1,0 +1,239 @@
+/* src/components/BlogPage.css */
+
+.blog-page-container {
+  padding: 120px 20px 60px;
+  background-color: #050505;
+  min-height: 100vh;
+  color: #fff;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.bp-header {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.bp-back-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.bp-back-btn:hover { color: #fff; }
+
+.bp-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* LAYOUT */
+.bp-layout {
+  display: flex;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bp-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* CARD */
+.bp-card {
+  background: #0f0f0f;
+  padding: 30px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.bp-card:hover {
+  border-color: #444;
+}
+
+.bp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bp-tag {
+  font-size: 10px;
+  background: #c8aa6e;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bp-date {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bp-card-title {
+  font-size: 24px;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.bp-card-title:hover {
+  color: #c8aa6e;
+}
+
+.bp-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.bp-excerpt {
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.bp-read-more {
+  color: #c8aa6e;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed transparent;
+  transition: 0.3s;
+}
+
+.bp-read-more:hover {
+  border-bottom-color: #c8aa6e;
+}
+
+/* SIDEBAR */
+.bp-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bp-widget h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
+  border-left: 3px solid #c8aa6e;
+  padding-left: 10px;
+}
+
+.bp-widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bp-widget ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.bp-widget ul li:hover { color: #c8aa6e; }
+
+.bp-widget.newsletter {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 8px;
+}
+
+.bp-widget.newsletter p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.bp-widget.newsletter input {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  border: 1px solid #333;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.bp-widget.newsletter button {
+  width: 100%;
+  padding: 10px;
+  background: #c8aa6e;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.bp-widget.newsletter button:hover {
+  background: #d9bb7f;
+}
+
+@media (max-width: 768px) {
+  .bp-layout { flex-direction: column; }
+  .bp-sidebar { order: -1; }
+}
+
+.bp-tag {
+  font-size: 10px;
+  background: #333; /* Màu mặc định xám */
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Style riêng cho từng loại tag */
+
+/* Tag: Tech hoặc Engine */
+.bp-tag.tech, .bp-tag.engine {
+  background: rgba(0, 242, 255, 0.2);
+  color: #00f2ff;
+  border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+/* Tag: Art hoặc 3D Art */
+.bp-tag.art, .bp-tag.3d-art {
+  background: rgba(255, 0, 85, 0.2);
+  color: #ff0055;
+  border: 1px solid rgba(255, 0, 85, 0.3);
+}
+
+/* Tag: Career */
+.bp-tag.career {
+  background: rgba(255, 255, 0, 0.2);
+  color: #ffee00;
+  border: 1px solid rgba(255, 255, 0, 0.3);
+}

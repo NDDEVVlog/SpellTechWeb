@@ -1,0 +1,95 @@
+/* Thiết lập chung cho Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161616; /* Màu đen xám giống hình mẫu */
+  height: 80px;
+  padding: 0 40px;
+  color: white;
+  font-family: 'Arial', sans-serif; /* Hoặc font bạn muốn */
+  font-size: 14px;
+  font-weight: 600; /* Chữ đậm */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- KHỐI TRÁI: LINKS --- */
+.nav-left {
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Khoảng cách giữa các chữ */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #aaa; /* Màu khi di chuột vào */
+}
+
+/* --- KHỐI GIỮA: LOGO --- */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Căn giữa logo */
+}
+
+.nav-logo-img {
+  height: 60px;
+  width: auto;
+
+  /* --- Thêm các dòng này --- */
+  background-color: white; /* Tô nền trắng cho phần trống */
+  padding: 5px;            /* Tạo khoảng hở giữa logo và viền trắng cho thoáng */
+  border-radius: 8px;      /* Bo tròn góc một chút cho mềm mại (tuỳ chọn) */
+}
+
+/* --- KHỐI PHẢI: ICONS --- */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px; /* Kích thước icon */
+}
+
+.social-icons a {
+  color: white;
+  display: flex;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px); /* Hiệu ứng nhẩy lên nhẹ khi hover */
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  border-left: 1px solid #444; /* Đường kẻ dọc ngăn cách */
+  padding-left: 20px;
+}
+
+.globe-icon {
+  font-size: 16px;
+}

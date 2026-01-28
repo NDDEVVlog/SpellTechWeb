@@ -1,0 +1,224 @@
+.pp-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.pp-header {
+  margin-bottom: 3rem;
+}
+
+.pp-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pp-controls {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pp-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pp-cat-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #667eea;
+  background: transparent;
+  color: #667eea;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pp-cat-btn:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.pp-cat-btn.active {
+  background: #667eea;
+  color: #fff;
+}
+
+.pp-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.5);
+}
+
+.pp-search input {
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.pp-search input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pp-search svg {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pp-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.pp-card:hover {
+  transform: translateY(-8px);
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.pp-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.pp-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pp-card:hover .pp-card-img {
+  transform: scale(1.05);
+}
+
+.pp-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pp-status.live {
+  background: #10b981;
+  color: #fff;
+}
+
+.pp-status.beta {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.pp-status.in-dev {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+.pp-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pp-meta {
+  margin-bottom: 0.5rem;
+}
+
+.pp-genre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+.pp-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.pp-card-desc {
+  font-size: 0.9rem;
+  color: #cbd5e0;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.pp-play-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.pp-play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+@media (max-width: 768px) {
+  .pp-container {
+    padding: 1rem;
+  }
+
+  .pp-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .pp-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .pp-filters {
+    width: 100%;
+  }
+
+  .pp-search {
+    width: 100%;
+  }
+}
