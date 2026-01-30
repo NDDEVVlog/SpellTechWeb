@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { productsData, blogsData } from '../data'; // Import data để show preview
+import logoImg from '/logo1.svg';
 
 const Home = ({ t, scroll, handleCardMouseMove, handleCardMouseLeave, teamMembers }) => {
   const scrollRef = useRef(null);
@@ -22,7 +23,7 @@ const Home = ({ t, scroll, handleCardMouseMove, handleCardMouseLeave, teamMember
       <section className="hero-section" id="home">
         <div className="overlay"></div>
         <div className="hero-container">
-          <img src="/logo1.svg" alt="Logo" className="hero-logo" />
+          <img src={logoImg} alt="Logo" className="hero-logo" />
           <h1 className="hero-slogan">{t.hero.slogan}</h1>
           <p className="hero-subtext">{t.hero.subtext}</p>
         </div>

@@ -204,36 +204,3 @@
   .bp-sidebar { order: -1; }
 }
 
-.bp-tag {
-  font-size: 10px;
-  background: #333; /* Màu mặc định xám */
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Style riêng cho từng loại tag */
-
-/* Tag: Tech hoặc Engine */
-.bp-tag.tech, .bp-tag.engine {
-  background: rgba(0, 242, 255, 0.2);
-  color: #00f2ff;
-  border: 1px solid rgba(0, 242, 255, 0.3);
-}
-
-/* Tag: Art hoặc 3D Art */
-.bp-tag.art, .bp-tag.3d-art {
-  background: rgba(255, 0, 85, 0.2);
-  color: #ff0055;
-  border: 1px solid rgba(255, 0, 85, 0.3);
-}
-
-/* Tag: Career */
-.bp-tag.career {
-  background: rgba(255, 255, 0, 0.2);
-  color: #ffee00;
-  border: 1px solid rgba(255, 255, 0, 0.3);
-}

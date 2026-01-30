@@ -8,6 +8,8 @@ import CyberOdyssey from './products/CyberOdyssey';
 import DuckKingdom from './products/DuckKingdom';
 import SceneSwitcherTool_V2 from './products/SceneSwitcherTool_V2';
 
+import SceneSwitcherCardImage from '/Product/SceneSwitcher/CardImage.png';
+
 // 2. DATA PRODUCTS
 export const productsData = [
   {
@@ -41,7 +43,19 @@ export const productsData = [
     genre: "Tool",
     status: "Beta",
     releaseDate: "TBA",
-    img: "https://images.unsplash.com/photo-1635326444826-06c8f711e7c5?q=80&w=2670&auto=format&fit=crop",
+    img: SceneSwitcherCardImage,
+    desc: "A powerful tool for switching scenes in Unity Development.",
+    ContentComponent: SceneSwitcherTool_V2, 
+    features: ["Tool ", "TagManager Integration", "ToolBar Access" ]
+  },
+  {
+    id: "scene-switcher-tool-v1",
+    slug: "scene-switcher-tool-v1",
+    title: "Scene Switcher Tool V1",
+    genre: "Tool",
+    status: "Beta",
+    releaseDate: "TBA",
+    img: SceneSwitcherCardImage,
     desc: "A powerful tool for switching scenes in Unity Development.",
     ContentComponent: SceneSwitcherTool_V2, 
     features: ["Tool ", "TagManager Integration", "ToolBar Access" ]
@@ -50,24 +64,24 @@ export const productsData = [
 
 // 3. DATA BLOGS
 export const blogsData = [
-  {
-    id: "why-godot",
-    slug: "why-godot",
-    date: "JAN 15, 2025",
-    author: "NDDevGame",
-    title: "Devlog #1: Why we switched to Godot Engine",
-    tag: "Tech",
-    excerpt: "Unity was fun, but open source is the future.",
-    ContentComponent: DevlogGodot // Sử dụng component đã import
-  },
-  {
-    id: "art-process-duck",
-    slug: "art-process-duck",
-    date: "DEC 20, 2024",
-    author: "Sora",
-    title: "Art Process: Creating the Duck King",
-    tag: "Art",
-    excerpt: "Creating the main character from sketch to 3D model.",
-    ContentComponent: ArtDuckKing
-  }
+  // {
+  //   id: "why-godot",
+  //   slug: "why-godot",
+  //   date: "JAN 15, 2025",
+  //   author: "NDDevGame",
+  //   title: "Devlog #1: Why we switched to Godot Engine",
+  //   tag: "Tech",
+  //   excerpt: "Unity was fun, but open source is the future.",
+  //   ContentComponent: DevlogGodot // Sử dụng component đã import
+  // },
+  // {
+  //   id: "art-process-duck",
+  //   slug: "art-process-duck",
+  //   date: "DEC 20, 2024",
+  //   author: "Sora",
+  //   title: "Art Process: Creating the Duck King",
+  //   tag: "Art",
+  //   excerpt: "Creating the main character from sketch to 3D model.",
+  //   ContentComponent: ArtDuckKing
+  // }
 ];
