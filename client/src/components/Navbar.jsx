@@ -30,6 +30,7 @@ const Navbar = ({ lang, setLang, t }) => {
           <li><Link to="/products">{t.products}</Link></li>
           <li><Link to="/#team">{t.team}</Link></li>
           <li><Link to="/blog">{t.blog}</Link></li>
+          <li><Link to="/privacy">{t.privacy}</Link></li>
         </ul>
       </div>
 
@@ -65,6 +66,7 @@ const Navbar = ({ lang, setLang, t }) => {
           <li><Link to="/products" onClick={closeMobileMenu}>{t.products}</Link></li>
           <li><Link to="/#team" onClick={closeMobileMenu}>{t.team}</Link></li>
           <li><Link to="/blog" onClick={closeMobileMenu}>{t.blog}</Link></li>
+          <li><Link to="/privacy" onClick={closeMobileMenu}>{t.privacy}</Link></li>
         </ul>
 
         <div className="mobile-actions">

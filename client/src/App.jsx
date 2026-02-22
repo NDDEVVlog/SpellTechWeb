@@ -12,6 +12,7 @@ import ProductsPage from './components/ProductsPage';
 import ProductDetail from './components/ProductDetail';
 import BlogPage from './components/BlogPage';
 import BlogDetail from './components/BlogDetail';
+import PrivacyPolicyRouter from './components/privacy/PrivacyPolicyRouter';
 import ScrollToHash from './components/ScrollToHash';
 
 import './App.css';
@@ -53,7 +54,7 @@ function App() {
   // Translations
   const translations = {
     en: {
-        navbar: { home: "HOME", products: "PRODUCTS", team: "TEAM", blog: "BLOG" },
+        navbar: { home: "HOME", products: "PRODUCTS", team: "TEAM", blog: "BLOG", privacy: "PRIVACY" },
         hero: { slogan: "WE ARE SPELL TECH", subtext: "We summon bugs and fix them with magic.", scroll: "SCROLL TO START" },
         contact: { title: "PARTNER WITH US", desc: "Let's build the future together.", bizTitle: "BUSINESS", copyright: "Spell Tech. Made in Vietnam." },
         team: { title: "THE SQUAD", sub: "Select your champion." },
@@ -61,7 +62,7 @@ function App() {
         blog: { title: "QUEST LOG", sub: "Development updates." }
     },
     vi: {
-        navbar: { home: "TRANG CHỦ", products: "SẢN PHẨM", team: "ĐỘI NGŨ", blog: "TIN TỨC" },
+        navbar: { home: "TRANG CHỦ", products: "SẢN PHẨM", team: "ĐỘI NGŨ", blog: "TIN TỨC", privacy: "BẢO MẬT" },
         hero: { slogan: "CHÚNG TÔI LÀ SPELL TECH", subtext: "Triệu hồi bug và sửa chúng bằng ma thuật.", scroll: "CUỘN XUỐNG" },
         contact: { title: "HỢP TÁC", desc: "Cùng nhau xây dựng tương lai.", bizTitle: "LIÊN HỆ", copyright: "Spell Tech. Sản xuất tại Việt Nam." },
         team: { title: "BIỆT ĐỘI", sub: "Chọn vị tướng của bạn." },
@@ -77,6 +78,7 @@ function App() {
     { id: 2, name: "SORA", role: "Duck/CO-FOUNDER", img: "https://images.unsplash.com/photo-1709429862860-630eb66fcf5e?q=80&w=735&auto=format&fit=crop", lore: "Colors of magic." },
     { id: 3, name: "BRO Q", role: "MODELER", img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1985&auto=format&fit=crop", lore: "Sculpting reality." },
     { id: 4, name: "BILL", role: "Coder", img: "https://images.unsplash.com/photo-1609761884183-5b8121294194?q=80&w=764&auto=format&fit=crop", lore: "Keeper of data." },
+    { id: 5, name: "Uma Rishima", role: "Artist", img: "/member/uma_rishima.png", lore: "Painter of dreams." },
   ];
 
   useEffect(() => {
@@ -169,6 +171,7 @@ function App() {
             
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyRouter lang={lang} />} />
 
             <Route path="/products/:slug" element={<ProductDetail />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />

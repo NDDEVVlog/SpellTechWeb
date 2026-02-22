@@ -1,0 +1,148 @@
+/* src/components/privacy/AppSelector.css */
+
+.app-selector {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(20, 20, 35, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.selector-header {
+  margin-bottom: 1.5rem;
+}
+
+.selector-header h3 {
+  color: #da70d6;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.app-button {
+  padding: 1rem;
+  background: rgba(30, 30, 50, 0.6);
+  border: 2px solid rgba(138, 43, 226, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-family: inherit;
+}
+
+.app-button:hover {
+  background: rgba(40, 40, 60, 0.8);
+  border-color: #da70d6;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+  transform: translateY(-2px);
+}
+
+.app-button.active {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(218, 112, 214, 0.2));
+  border-color: #da70d6;
+  box-shadow: 0 0 20px rgba(218, 112, 214, 0.5);
+}
+
+.app-name {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.app-label {
+  color: rgba(138, 43, 226, 0.8);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Light Mode */
+body.light-mode .app-selector {
+  background: rgba(240, 240, 255, 0.4);
+  border-color: rgba(138, 43, 226, 0.2);
+}
+
+body.light-mode .selector-header h3 {
+  color: #6a0dad;
+}
+
+body.light-mode .app-button {
+  background: rgba(250, 250, 255, 0.6);
+  border-color: rgba(138, 43, 226, 0.3);
+}
+
+body.light-mode .app-button:hover {
+  background: rgba(245, 245, 255, 0.9);
+  border-color: #6a0dad;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+}
+
+body.light-mode .app-button.active {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(106, 0, 173, 0.15));
+  border-color: #6a0dad;
+  box-shadow: 0 0 20px rgba(106, 0, 173, 0.4);
+}
+
+body.light-mode .app-name {
+  color: #1a1a2e;
+}
+
+body.light-mode .app-label {
+  color: rgba(138, 43, 226, 0.7);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .app-selector {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .app-button {
+    padding: 0.8rem;
+  }
+
+  .app-name {
+    font-size: 0.95rem;
+  }
+
+  .app-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-selector {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .app-button {
+    padding: 0.6rem;
+  }
+
+  .app-name {
+    font-size: 0.9rem;
+  }
+
+  .app-label {
+    font-size: 0.75rem;
+  }
+}
