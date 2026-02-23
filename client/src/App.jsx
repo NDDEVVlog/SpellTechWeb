@@ -1,7 +1,8 @@
 // src/App.jsx
 
 import React, { useState, useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// --- THAY ĐỔI Ở ĐÂY: Đổi BrowserRouter thành HashRouter ---
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { FaEnvelope, FaDiscord } from 'react-icons/fa';
 
 // Components
