@@ -16,6 +16,9 @@ const privacyPolicies = {
   'sceneswitcher': sceneSwitcherPolicy,
   'SceneSwitcherTool_V2': sceneSwitcherPolicy,
   'Scene Switcher Tool V2': sceneSwitcherPolicy,
+  // free/lite variant
+  'SceneSwitcherTool_V1': sceneSwitcherPolicy,
+  'Scene Switcher Tool V1': sceneSwitcherPolicy,
 };
 
 export const getPrivacyPolicyData = (appName) => {

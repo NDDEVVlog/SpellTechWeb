@@ -7,6 +7,7 @@ import ArtDuckKing from './posts/ArtDuckKing';
 import CyberOdyssey from './products/CyberOdyssey';
 import DuckKingdom from './products/DuckKingdom';
 import SceneSwitcherTool_V2 from './products/SceneSwitcherTool_V2';
+import SceneSwitcherTool_V1 from './products/SceneSwitcherTool_V1';
 
 import SceneSwitcherCardImage from '/Product/SceneSwitcher/CoverPicture.png';
 
@@ -30,7 +31,7 @@ export const productsData = [
     ],
     // --- CẤU HÌNH NÚT BẤM ---
     customButtonText: "Get on Asset Store", // Chữ hiển thị
-    customLink: "https://assetstore.unity.com/", // Link đích
+    customLink: "https://assetstore.unity.com/packages/tools/utilities/scene-switcher-tool-v2-346640", // Link đích
     
     // Component hiển thị nội dung chi tiết
     ContentComponent: SceneSwitcherTool_V2 
@@ -41,12 +42,21 @@ export const productsData = [
     title: "Scene Switcher Tool V1",
     genre: "Tool",
     status: "Beta",
-    releaseDate: "TBA",
+    releaseDate: "Coming Soon",
     img: SceneSwitcherCardImage,
-    desc: "A powerful tool for switching scenes in Unity Development.",
-    ContentComponent: SceneSwitcherTool_V2, 
-    features: ["Tool ", "TagManager Integration", "ToolBar Access" ]
-  }
+    desc: "A free, stripped-down edition of Scene Switcher",
+    ContentComponent: SceneSwitcherTool_V1, 
+    features: [
+      "Smart Bookmarking",
+      "Quick Search",
+      "Additive Workflow",
+      "Basic Toolbar Support",
+      "Scene Combo (Pro)",
+      "Tag Manager (Pro)"
+    ],
+    customButtonText: "Coming Soon",
+    //customLink: "https://assetstore.unity.com/packages/tools/utilities/scene-switcher-tool-v2-346640",
+  },  
 ];
 
 // 3. DATA BLOGS
