@@ -78,8 +78,6 @@ function App() {
     { id: 1, name: "NDDEVGAME", role: "CO-FOUNDER", img: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop", lore: "Code is creation." },
     { id: 2, name: "SORA", role: "Duck/CO-FOUNDER", img: "https://images.unsplash.com/photo-1709429862860-630eb66fcf5e?q=80&w=735&auto=format&fit=crop", lore: "Colors of magic." },
     { id: 3, name: "BRO Q", role: "MODELER", img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1985&auto=format&fit=crop", lore: "Sculpting reality." },
-    { id: 4, name: "BILL", role: "Coder", img: "https://images.unsplash.com/photo-1609761884183-5b8121294194?q=80&w=764&auto=format&fit=crop", lore: "Keeper of data." },
-    { id: 5, name: "Uma Rishima", role: "Artist", img: "/member/uma_rishima.png", lore: "Painter of dreams." },
   ];
 
   useEffect(() => {

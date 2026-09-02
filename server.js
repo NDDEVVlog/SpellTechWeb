@@ -26,7 +26,8 @@ app.use(express.urlencoded({ extended: true })); // Đọc dữ liệu từ Form
 
 // QUAN TRỌNG: Cấu hình thư mục chứa file tĩnh (HTML, CSS, JS, Ảnh)
 // Tạo một thư mục tên là 'public' cùng cấp với file này để chứa giao diện web
-app.use(express.static(path.join(__dirname, 'public')));
+const clientDistPath = path.join(__dirname, 'client', 'dist');
+app.use(express.static(clientDistPath));
 
 /**
  * 4. ROUTES (Định tuyến API)
@@ -48,8 +49,8 @@ app.get('/api/members', (req, res) => {
 // Route mặc định: Nếu người dùng vào đường dẫn không tồn tại
 // Server sẽ trả về file index.html (nếu bạn làm Single Page App) 
 // hoặc thông báo lỗi.
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get('/{*splat}', (req, res) => {
+    res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
 /**
